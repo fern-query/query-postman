@@ -1,0 +1,615 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.query.co/v1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Api Key",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/apikeys",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "apikeys"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "list",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/apikeys?limit=&page=&sort=&expand=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "apikeys"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "key": "sort",
+                  "value": ""
+                },
+                {
+                  "key": "expand",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "update",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/apikeys/:apiKeyId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "apikeys",
+                ":apiKeyId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "apiKeyId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "roll",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/apikeys/:apiKeyId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "apikeys",
+                ":apiKeyId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "apiKeyId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "delete",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/apikeys/:apiKeyId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "apikeys",
+                ":apiKeyId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "apiKeyId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "DELETE"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "loginWithEmail",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/auth/login/email?redirect=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "auth",
+                "login",
+                "email"
+              ],
+              "query": [
+                {
+                  "key": "redirect",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "recycle",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/auth/recycle",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "auth",
+                "recycle"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"authorization\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "getUser",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/ajax/auth/user",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ajax",
+                "auth",
+                "user"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Database",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/databases",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "databases"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"example\",\n    \"tables\": {\n        \"example\": {\n            \"example\": {\n                \"data_type\": \"example\",\n                \"is_primary_key\": true,\n                \"is_foreign_key\": true,\n                \"referenced_table\": \"example\",\n                \"referenced_field\": \"example\",\n                \"hashed\": true,\n                \"excluded\": true,\n                \"enum\": [\n                    \"UNKNOWN\"\n                ]\n            }\n        }\n    },\n    \"public\": true,\n    \"source_details\": {\n        \"database_url\": \"example\",\n        \"database_url_iv\": \"example\",\n        \"csv_url\": \"example\",\n        \"csv_id\": \"example\",\n        \"search_path\": [\n            \"example\"\n        ]\n    },\n    \"source\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "get",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/databases/:databaseId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "databases",
+                ":databaseId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "databaseId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "list",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/databases?limit=&page=&sort=&expand=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "databases"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "key": "sort",
+                  "value": ""
+                },
+                {
+                  "key": "expand",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "listPublic",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/databases/public?limit=&page=&sort=&expand=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "databases",
+                "public"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "key": "sort",
+                  "value": ""
+                },
+                {
+                  "key": "expand",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "update",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/databases/:databaseId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "databases",
+                ":databaseId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "databaseId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"example\",\n    \"tables\": {\n        \"example\": {\n            \"example\": {\n                \"data_type\": \"example\",\n                \"is_primary_key\": true,\n                \"is_foreign_key\": true,\n                \"referenced_table\": \"example\",\n                \"referenced_field\": \"example\",\n                \"hashed\": true,\n                \"excluded\": true,\n                \"enum\": [\n                    \"UNKNOWN\"\n                ]\n            }\n        }\n    },\n    \"description\": \"example\",\n    \"image\": \"example\",\n    \"public\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    },
+    {
+      "name": "Query",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/queries",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "queries"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"question\": \"example\",\n    \"database\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "get",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/queries/:queryId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "queries",
+                ":queryId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "queryId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "list",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/queries?limit=&page=&sort=&expand=",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "queries"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": ""
+                },
+                {
+                  "key": "page",
+                  "value": ""
+                },
+                {
+                  "key": "sort",
+                  "value": ""
+                },
+                {
+                  "key": "expand",
+                  "value": ""
+                }
+              ],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "update",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/queries/:queryId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "queries",
+                ":queryId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "queryId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"code\": \"example\",\n    \"name\": \"example\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [],
+          "_type": "endpoint"
+        },
+        {
+          "name": "delete",
+          "request": {
+            "url": {
+              "raw": "{{baseUrl}}/v1/queries/:queryId",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "queries",
+                ":queryId"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "key": "queryId",
+                  "value": ""
+                }
+              ]
+            },
+            "header": [],
+            "method": "POST"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
