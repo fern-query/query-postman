@@ -8,8 +8,23 @@
       "key": "baseUrl",
       "value": "https://api.query.co/api",
       "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
     }
   ],
+  "auth": {
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ],
+    "type": "bearer"
+  },
   "item": [
     {
       "name": "Api Key",
